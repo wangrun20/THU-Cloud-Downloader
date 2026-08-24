@@ -1,4 +1,7 @@
 # Tsinghua Cloud Downloader
+```shell
+2024/09: 毕业啦🎓本项目暂停维护
+```
 清华云盘批量下载助手，适用于分享的文件 size 过大导致无法直接下载的情况，本脚本添加了更多实用的小功能：
 
 - [x] 直接下载链接中的所有文件，无打包过程，且无文件数量和大小限制
@@ -8,9 +11,9 @@
 
 
 ## Dependency
-需要提前安装python，安装过程略，其它依赖库：
+需要提前安装python，安装过程略，以及`requirements.txt`文件里面的依赖库：
 ```shell
-pip install tqdm
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -38,18 +41,18 @@ python thu_cloud_download.py \
 具体用法如下
 ```shell
 # 下载链接中所有文件
-python main.py -l https://xxx
+python thu_cloud_download.py -l https://xxx
 # 下载链接中所有的.txt文件
-python main.py -l https://xxx -f *.txt
+python thu_cloud_download.py -l https://xxx -f *.txt
 # 下载链接中某个文件夹的所有文件
-python main.py -l https://xxx -f folder/subfolder/*
+python thu_cloud_download.py -l https://xxx -f folder/subfolder/*
 ``` 
 
 
 ## Output Log Example
 下载链接中的全部txt文件
 ```
->>  python main.py -l https://cloud.tsinghua.edu.cn/d/b9aca92417f04166acdc/ -f *.pcd
+>>  python thu_cloud_download.py -l https://cloud.tsinghua.edu.cn/d/b9aca92417f04166acdc/ -f *.pcd
 
 2023-12-18 21:15:11,853 - INFO - Share key: b9aca92417f04166acdc
 2023-12-18 21:15:12,811 - INFO - Searching for files to be downloaded, Wait a moment...
